@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فرسان لغة الضاد | أ/ حازم أنور</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for Modern Academic Identity -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;700;800;900&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            heritage: {
+              gold: '#C2A878', /* Beige / Old Gold Accent */
+              goldLight: '#F5F5F5', /* White Smoke */
+              goldDark: '#8B7355', /* Dark Beige */
+              emerald: '#800020', /* Burgundy / Wine Red */
+              emeraldDark: '#4A0404', /* Dark Burgundy */
+              emeraldLight: '#9B111E', /* Ruby / Light Burgundy */
+              parchment: '#FDF5E6', /* Old Paper / Light Beige */
+              parchmentDark: '#E8D8C8', /* Darker Old Paper */
+              navy: '#2C1414', /* Dark Brownish-Black */
+              crimson: '#dc2626',
+              azure: '#800020'
+            }
+          },
+          fontFamily: {
+            amiri: ['Amiri', 'serif'],
+            cairo: ['Cairo', 'sans-serif'],
+            kufi: ['"Reem Kufi"', 'sans-serif']
+          },
+          boxShadow: {
+            'royal': '0 10px 25px -3px rgba(128, 0, 32, 0.25), 0 4px 10px -2px rgba(194, 168, 120, 0.3)',
+            'golden': '0 0 20px rgba(194, 168, 120, 0.45)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #F5F5F5;
+      background-image: radial-gradient(#C2A878 0.75px, transparent 0.75px), radial-gradient(#800020 0.75px, #F5F5F5 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      min-height: 100vh;
+    }
+    .font-heritage {
+      font-family: 'Amiri', serif;
+    }
+    .font-kufi {
+      font-family: '"Reem Kufi"', sans-serif;
+    }
+    /* Arabic Islamic Geometric Border Ornament (Burgundy Theme) */
+    .ornate-border {
+      border: 4px double #C2A878;
+      outline: 2px solid #800020;
+      outline-offset: 4px;
+    }
+    .arabesque-pattern {
+      background-color: #800020;
+      background-image: radial-gradient(circle at 50% 50%, rgba(194, 168, 120, 0.15) 10%, transparent 20%),
+                        radial-gradient(circle at 0% 100%, rgba(194, 168, 120, 0.1) 15%, transparent 20%);
+    }
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(194, 168, 120, 0.4); }
+      50% { transform: scale(1.02); box-shadow: 0 0 25px rgba(194, 168, 120, 0.7); }
+    }
+    .glow-effect {
+      animation: pulseGlow 2.5s infinite ease-in-out;
+    }
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printArea, #printArea * {
+        visibility: visible;
+      }
+      #printArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-heritage-gold selection:text-heritage-navy">
+
+  <header class="arabesque-pattern text-heritage-goldLight border-b-4 border-heritage-gold shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3 space-x-reverse">
+        <div class="w-12 h-12 rounded-full border-2 border-heritage-gold bg-heritage-emeraldDark flex items-center justify-center shadow-golden">
+          <svg class="w-7 h-7 text-heritage-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-kufi text-heritage-gold font-bold tracking-wide">فُرْسَانُ لُغَةِ الضَّادِ</h1>
+          <p class="text-xs text-heritage-goldLight">اختبار المفعول به التفاعلي • الصف الخامس الابتدائي</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3 space-x-reverse">
+        <!-- Sound toggle button -->
+        <button id="toggleSoundBtn" onclick="toggleAudio()" class="px-3 py-1.5 rounded-lg bg-heritage-emerald text-heritage-goldLight border border-heritage-gold/50 hover:bg-heritage-emeraldLight transition flex items-center space-x-1.5 space-x-reverse text-xs md:text-sm">
+          <span id="soundIcon">🔊</span>
+          <span class="hidden sm:inline">الصوت</span>
+        </button>
+        <!-- Teacher Control Room Button -->
+        <button onclick="openAdminModal()" class="px-3 py-1.5 rounded-lg bg-heritage-gold text-heritage-navy font-bold hover:bg-heritage-goldLight transition flex items-center space-x-1.5 space-x-reverse text-xs md:text-sm shadow">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <span>لوحة المعلم</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+
+    <!-- SCREEN 1: Welcome & Student Registration -->
+    <section id="welcomeScreen" class="bg-heritage-parchment rounded-2xl ornate-border p-6 md:p-10 shadow-royal relative overflow-hidden">
+      <!-- Decorative background emblem -->
+      <div class="absolute -left-12 -top-12 opacity-5 pointer-events-none">
+        <svg class="w-64 h-64 text-heritage-emerald" fill="currentColor" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" fill="none"/>
+          <path d="M50 5 L95 50 L50 95 L5 50 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto">
+        <div class="inline-block p-3 rounded-full bg-heritage-emerald/10 border border-heritage-gold mb-4">
+          <span class="text-4xl">📘</span>
+        </div>
+        <h2 class="text-2xl md:text-4xl font-kufi font-bold text-heritage-emerald mb-3">
+          مَرْحَبًا بِكُمْ فِي رِحْلَةِ النَّحْوِ العَرَبِيِّ
+        </h2>
+        <p class="text-sm md:text-base text-gray-700 leading-relaxed font-heritage text-lg">
+          رحلة علمية شيقة إلى بساتين لغتنا الخالدة، لاكتشاف أسرار <strong class="text-heritage-emeraldDark">المفعول به</strong> بحالاته المتعددة: 
+          المفرد، وجمع التكسير، والمثنى، وجمع المذكر السالم، وجمع المؤنث السالم.
+        </p>
+
+        <!-- Test Metadata Card -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6 text-sm text-heritage-navy">
+          <div class="bg-white/80 border border-heritage-gold/60 p-3 rounded-xl shadow-sm">
+            <span class="text-xs text-gray-500 block font-bold">الصف الدراسي</span>
+            <span class="font-bold text-heritage-emerald text-base">الخامس الابتدائي</span>
+          </div>
+          <div class="bg-white/80 border border-heritage-gold/60 p-3 rounded-xl shadow-sm">
+            <span class="text-xs text-gray-500 block font-bold">المعلم الفاضل</span>
+            <span class="font-bold text-heritage-navy text-base">أ/ حازم أنور</span>
+          </div>
+          <div class="bg-white/80 border border-heritage-gold/60 p-3 rounded-xl shadow-sm">
+            <span class="text-xs text-gray-500 block font-bold">تاريخ الدخول</span>
+            <span id="currentDateDisplay" class="font-bold text-heritage-azure text-base">--/--/----</span>
+          </div>
+        </div>
+
+        <!-- Student Form -->
+        <div class="bg-white p-6 rounded-xl border border-sky-300 shadow-inner max-w-md mx-auto text-right">
+          <label for="studentNameInput" class="block text-sm font-bold text-heritage-emeraldDark mb-2">
+            ✍️ اكتب اسمك الثلاثي لتبدأ المنافسة:
+          </label>
+          <input type="text" id="studentNameInput" placeholder="مثال: أحمد محمود علي" 
+                 class="w-full px-4 py-3 border-2 border-heritage-gold/70 rounded-lg focus:outline-none focus:border-heritage-emerald text-base font-semibold text-gray-800 transition shadow-sm mb-3">
+          <p id="nameError" class="text-red-600 text-xs hidden mb-3">يرجى كتابة اسم الطالب أولاً للانطلاق في الاختبار!</p>
+
+          <button onclick="startQuiz()" class="w-full py-3.5 bg-gradient-to-r from-heritage-emerald to-heritage-emeraldLight text-white font-kufi font-bold rounded-xl shadow-golden hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center space-x-2 space-x-reverse text-lg">
+            <span>انطلق في الاختبار (40 سؤالاً)</span>
+            <span>🚀</span>
+          </button>
+          <div id="cloudSaveStatus" class="text-xs mt-2 text-slate-500">
+            يتم حفظ النتائج تلقائيًا في سجل المعلم بعد انتهاء الاختبار.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: Active Quiz Gameplay -->
+    <section id="quizScreen" class="hidden">
+      <!-- Top Status & Progress Bar -->
+      <div class="bg-heritage-parchment rounded-xl ornate-border p-4 mb-4 shadow flex flex-col gap-3">
+        <div class="flex items-center justify-between text-xs md:text-sm font-bold text-heritage-navy">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-blue-600 animate-ping"></span>
+            <span>الطالب: <span id="quizStudentNameDisplay" class="text-heritage-emerald"></span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="bg-heritage-gold/20 text-heritage-goldDark px-3 py-1 rounded-full border border-heritage-gold/40">
+              السؤال: <span id="currentQuestionNumber">1</span> / 40
+            </span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full border border-blue-300">
+              النقاط: <span id="liveScore">0</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Progress bar line -->
+        <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden border border-heritage-gold/30">
+          <div id="progressBarFill" class="bg-gradient-to-r from-heritage-gold to-heritage-emerald h-3 rounded-full transition-all duration-300" style="width: 2.5%"></div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="bg-white rounded-2xl ornate-border p-6 md:p-8 shadow-royal relative">
+        <!-- Topic / Category Badge -->
+        <div class="flex items-center justify-between mb-4">
+          <span id="questionTopicBadge" class="text-xs font-bold px-3 py-1 rounded-full bg-sky-100 text-heritage-goldDark border border-heritage-gold/50">
+            علامات إعراب المفعول به
+          </span>
+          <span id="difficultyBadge" class="text-xs px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-300">
+            مستوى متوازن
+          </span>
+        </div>
+
+        <!-- Visual / Cultural Illustration for the Question -->
+        <div id="questionIllustration" class="w-full h-36 md:h-44 rounded-xl bg-heritage-parchment border border-sky-300 flex items-center justify-center p-3 mb-5 overflow-hidden shadow-inner">
+          <!-- Dynamic SVG injected via JS -->
+        </div>
+
+        <!-- Question Title / Text -->
+        <h3 id="questionText" class="text-lg md:text-2xl font-bold font-heritage text-heritage-navy leading-relaxed mb-6 text-right">
+          جاري تحميل السؤال...
+        </h3>
+
+        <!-- 4 Options Grid -->
+        <div id="optionsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Immediate Educational Feedback Box -->
+        <div id="feedbackBox" class="hidden rounded-xl p-4 mb-5 border-2 text-right transition-all duration-300">
+          <div class="flex items-start gap-3">
+            <span id="feedbackIcon" class="text-2xl mt-0.5">🌟</span>
+            <div class="flex-1">
+              <h4 id="feedbackTitle" class="font-bold text-base md:text-lg mb-1"></h4>
+              <p id="feedbackExplanation" class="text-sm leading-relaxed text-gray-700 font-heritage text-base"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+          <button onclick="confirmExitQuiz()" class="px-4 py-2 rounded-lg bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-700 border border-slate-300 transition text-xs md:text-sm font-semibold flex items-center gap-1">
+            <span>إنهاء الاختبار مبكراً</span>
+          </button>
+          <button id="nextQuestionBtn" onclick="nextQuestion()" disabled class="px-6 py-2.5 rounded-xl bg-heritage-emerald text-white font-bold font-kufi shadow hover:bg-heritage-emeraldLight disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2">
+            <span id="nextBtnText">السؤال التالي</span>
+            <span>←</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: Final Results & Certificate View -->
+    <section id="resultsScreen" class="hidden">
+      <div class="bg-heritage-parchment rounded-2xl ornate-border p-6 md:p-10 shadow-royal text-center">
+        <!-- Trophy / Ribbon Icon -->
+        <div class="inline-block p-4 rounded-full bg-heritage-gold/20 border-2 border-heritage-gold mb-4 glow-effect">
+          <span id="resultEmoji" class="text-5xl">🏆</span>
+        </div>
+
+        <h2 class="text-2xl md:text-4xl font-kufi font-bold text-heritage-emeraldDark mb-2">
+          نَتِيجَةُ فَاِرسِ اللُّغَةِ
+        </h2>
+        <p class="text-gray-600 text-sm md:text-base mb-6">
+          أتممت الاختبار المخصص لقواعد المفعول به بنجاح، وإليك تفاصيل أدائك:
+        </p>
+
+        <!-- Score Meter Card -->
+        <div class="max-w-md mx-auto bg-white rounded-xl border-2 border-heritage-gold/80 p-6 shadow-md mb-6">
+          <div class="text-4xl md:text-5xl font-extrabold text-heritage-emerald font-kufi mb-1">
+            <span id="finalScoreDisplay">0</span> <span class="text-xl text-gray-500">/ 40</span>
+          </div>
+          <div class="text-lg font-bold text-heritage-goldDark mb-3">
+            النسبة المئوية: <span id="finalPercentageDisplay">0%</span>
+          </div>
+
+          <!-- Rating Badge & Message -->
+          <div id="performanceBadge" class="py-2.5 px-4 rounded-lg font-bold text-base mb-3">
+            <!-- Injected via JS -->
+          </div>
+          <p id="performanceMessage" class="text-xs md:text-sm text-gray-700 leading-relaxed font-heritage text-base">
+            <!-- Injected via JS -->
+          </p>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <button id="showMistakesBtn" onclick="toggleMistakesReview()" class="px-5 py-2.5 rounded-xl bg-heritage-azure text-white font-bold hover:bg-indigo-800 transition text-sm shadow flex items-center gap-2">
+            <span>🔍 مراجعة الأسئلة الخاطئة</span>
+            <span id="mistakesCountBadge" class="bg-white/20 text-xs px-2 py-0.5 rounded-full">0</span>
+          </button>
+          
+          <button id="viewCertificateBtn" onclick="openCertificateView()" class="hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-heritage-gold to-heritage-goldDark text-heritage-navy font-bold hover:brightness-105 transition text-sm shadow-golden flex items-center gap-2">
+            <span>📜 استلام شهادة التقدير</span>
+            <span>⭐</span>
+          </button>
+
+          <button onclick="restartQuiz()" class="px-5 py-2.5 rounded-xl bg-heritage-emerald text-white font-bold hover:bg-heritage-emeraldLight transition text-sm shadow flex items-center gap-2">
+            <span>🔄 خوض الاختبار مجدداً</span>
+          </button>
+        </div>
+
+        <!-- Review Mistakes Collapsible Section -->
+        <div id="mistakesReviewSection" class="hidden text-right mt-6 border-t-2 border-heritage-gold/30 pt-6">
+          <h3 class="text-xl font-bold font-kufi text-heritage-crimson mb-4 flex items-center gap-2">
+            <span>📖 بنك المراجعة والتعلم من الأخطاء:</span>
+          </h3>
+          <div id="mistakesContainer" class="space-y-4 max-h-96 overflow-y-auto pr-2">
+            <!-- Mistakes items populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="certificateModal" class="hidden fixed inset-0 z-50 bg-slate-900/80 flex items-center justify-center p-2 md:p-6 overflow-y-auto">
+      <div class="relative bg-white rounded-2xl max-w-3xl w-full p-4 md:p-8 shadow-2xl my-auto">
+        <!-- Close button -->
+        <button onclick="closeCertificateModal()" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-slate-200 hover:bg-red-500 hover:text-white flex items-center justify-center font-bold transition z-10 no-print">
+          ✕
+        </button>
+
+        <!-- Printable Certificate Area -->
+        <div id="printArea" class="bg-[#f8fafc] p-6 md:p-10 ornate-border relative text-center border-8 border-heritage-gold rounded-lg shadow-inner overflow-hidden">
+          <!-- Ornate Corner Decorations -->
+          <div class="absolute top-2 left-2 text-heritage-gold text-2xl select-none">⚜️</div>
+          <div class="absolute top-2 right-2 text-heritage-gold text-2xl select-none">⚜️</div>
+          <div class="absolute bottom-2 left-2 text-heritage-gold text-2xl select-none">⚜️</div>
+          <div class="absolute bottom-2 right-2 text-heritage-gold text-2xl select-none">⚜️</div>
+
+          <div class="border-2 border-dashed border-heritage-emerald/40 p-6 md:p-8 rounded">
+            <!-- Header -->
+            <div class="mb-4">
+              <span class="text-xs uppercase tracking-widest text-heritage-goldDark font-bold block mb-1">جمهورية مصر العربية • وزارة التربية والتعليم</span>
+              <h2 class="text-3xl md:text-5xl font-kufi font-black text-heritage-emerald mb-1">شَهَادَةُ تَقْدِيرٍ وَتَمَيُّزٍ</h2>
+              <div class="w-32 h-1 bg-gradient-to-r from-heritage-gold via-heritage-emerald to-heritage-gold mx-auto my-2 rounded"></div>
+              <p class="text-xs md:text-sm font-heritage text-heritage-goldDark">فِي مَهَارَاتِ النَّحْوِ وَقَوَاعِدِ اللُّغَةِ العَرَبِيَّةِ</p>
+            </div>
+
+            <!-- Certificate Body -->
+            <p class="text-sm md:text-base text-gray-700 font-heritage leading-relaxed mb-3">
+              يَسُرُّ مُعَلِّمَ المَادَّةِ أَنْ يَمْنَحَ هَذِهِ الشَّهَادَةَ لِلْفَارِسِ النَّحْوِيِّ:
+            </p>
+
+            <div class="my-4">
+              <span id="certStudentName" class="inline-block px-8 py-2 border-b-2 border-heritage-gold font-kufi text-2xl md:text-4xl font-black text-heritage-navy bg-sky-50/50 rounded-t">
+                الطالب الفائز
+              </span>
+            </div>
+
+            <p class="text-sm md:text-base text-gray-700 font-heritage leading-relaxed max-w-xl mx-auto mb-5">
+              طَالِبِ <strong class="text-heritage-emerald">الصَّفِّ الخَامِسِ الابْتِدَائِيِّ</strong>، لاجْتِيَازِهِ بِاقْتِدَارٍ وَتَفَوُّقٍ بَاهِرٍ اخْتِبَارَ <strong class="text-heritage-emeraldDark">(المَفْعُولِ بِهِ وَعَلامَاتِ إِعْرَابِهِ كَامِلَةً)</strong>، وَحُصُولِهِ عَلَى دَرَجَةِ الشَّرَفِ:
+            </p>
+
+            <!-- Score highlight box -->
+            <div class="inline-flex items-center gap-4 bg-sky-100/70 border border-heritage-gold px-6 py-2 rounded-xl mb-6 shadow-sm">
+              <div>
+                <span class="text-xs text-slate-600 block">الدرجة المستحقة</span>
+                <span id="certScoreDisplay" class="font-kufi font-bold text-xl text-heritage-emerald">40 / 40</span>
+              </div>
+              <div class="h-8 w-px bg-heritage-gold"></div>
+              <div>
+                <span class="text-xs text-slate-600 block">النسبة المئوية</span>
+                <span id="certPercentDisplay" class="font-kufi font-bold text-xl text-heritage-goldDark">100%</span>
+              </div>
+              <div class="h-8 w-px bg-heritage-gold"></div>
+              <div>
+                <span class="text-xs text-slate-600 block">التقدير العام</span>
+                <span class="font-kufi font-bold text-xl text-blue-800">مُمْتَازٌ بِمَرْتَبَةِ الشَّرَفِ</span>
+              </div>
+            </div>
+
+            <!-- Signatures and Golden Stamp -->
+            <div class="flex items-end justify-between mt-4 pt-4 border-t border-slate-200 text-xs md:text-sm">
+              <div class="text-right">
+                <span class="block text-slate-500 mb-1">تاريخ المنح:</span>
+                <span id="certDateDisplay" class="font-bold text-heritage-navy">--/--/----</span>
+              </div>
+
+              <!-- Burgundy/Gold Ornate Seal -->
+              <div class="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-double border-heritage-gold bg-gradient-to-tr from-heritage-emerald via-heritage-gold to-heritage-emeraldDark flex items-center justify-center shadow-lg transform rotate-6">
+                <div class="text-center text-white font-kufi text-[10px] md:text-xs font-black leading-tight">
+                  <span>ختم التميز</span><br>
+                  <span>أ/ حازم أنور</span><br>
+                  <span>★★★★★</span>
+                </div>
+              </div>
+
+              <div class="text-left">
+                <span class="block text-slate-500 mb-1">معلم المادة:</span>
+                <span class="font-kufi font-bold text-heritage-emerald text-base block">أ/ حازم أنور</span>
+                <span class="text-[11px] text-slate-500">(مُعَلِّمُ اللُّغَةِ العَرَبِيَّةِ)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate action buttons -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 no-print">
+          <button onclick="window.print()" class="px-6 py-2.5 rounded-xl bg-heritage-emerald text-white font-bold hover:bg-blue-700 transition shadow flex items-center gap-2">
+            <span>🖨️ طباعة الشهادة / حفظ كـ PDF</span>
+          </button>
+          <button onclick="closeCertificateModal()" class="px-5 py-2.5 rounded-xl bg-slate-200 text-slate-700 font-bold hover:bg-slate-300 transition">
+            إغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEACHER CONTROL ROOM MODAL -->
+    <div id="adminModal" class="hidden fixed inset-0 z-50 bg-slate-900/75 flex items-center justify-center p-3 md:p-6 overflow-y-auto">
+      <div class="relative bg-white rounded-2xl max-w-4xl w-full p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+        <!-- Close -->
+        <button onclick="closeAdminModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-700 font-bold text-xl">✕</button>
+
+        <div class="flex items-center space-x-3 space-x-reverse mb-6 border-b pb-4">
+          <div class="w-10 h-10 rounded-lg bg-heritage-gold text-heritage-navy flex items-center justify-center font-bold text-xl">⚙️</div>
+          <div>
+            <h3 class="text-2xl font-kufi font-bold text-heritage-navy">غرفة تحكم المعلم (أ/ حازم أنور)</h3>
+            <p class="text-xs text-slate-500">متابعة دقيقة لنتائج الطلاب، التقارير الإحصائية، وبنك الأسئلة</p>
+          </div>
+        </div>
+
+        <!-- Password Gate View -->
+        <div id="adminPasswordGate" class="max-w-sm mx-auto text-center py-8">
+          <span class="text-4xl mb-3 block">🔒</span>
+          <h4 class="text-lg font-bold text-slate-800 mb-2">أدخل كلمة سر المعلم</h4>
+          <p class="text-xs text-slate-500 mb-4">هذه اللوحة مخصصة للمعلم لمتابعة تقارير الطلاب وتعديل الإعدادات.</p>
+          <input type="password" id="adminPasswordInput" placeholder="كلمة المرور" class="w-full px-4 py-2 border rounded-lg text-center font-mono tracking-widest text-lg focus:outline-none focus:border-heritage-emerald mb-3">
+          <p id="adminPassError" class="text-red-500 text-xs hidden mb-3">كلمة المرور غير صحيحة، يرجى إعادة المحاولة.</p>
+          <button onclick="checkAdminPassword()" class="w-full py-2.5 bg-heritage-navy text-white font-bold rounded-lg hover:bg-slate-800 transition">
+            دخول لوحة التحكم
+          </button>
+        </div>
+
+        <!-- Authenticated Dashboard View -->
+        <div id="adminDashboardView" class="hidden space-y-6 text-right">
+          <!-- Quick Stat Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-xl">
+              <span class="text-xs text-blue-600 block font-bold">إجمالي المحاولات</span>
+              <span id="statTotalAttempts" class="text-2xl font-bold text-blue-900">0</span>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-xl">
+              <span class="text-xs text-blue-600 block font-bold">نسبة النجاح العامة</span>
+              <span id="statPassRate" class="text-2xl font-bold text-blue-900">0%</span>
+            </div>
+            <div class="bg-sky-50 border border-sky-200 p-3 rounded-xl">
+              <span class="text-xs text-sky-600 block font-bold">متوسط الدرجات</span>
+              <span id="statAverageScore" class="text-2xl font-bold text-sky-900">0/40</span>
+            </div>
+            <div class="bg-indigo-50 border border-indigo-200 p-3 rounded-xl">
+              <span class="text-xs text-indigo-600 block font-bold">الشهادات الممنوحة</span>
+              <span id="statCertificatesCount" class="text-2xl font-bold text-indigo-900">0</span>
+            </div>
+          </div>
+
+          <!-- Configuration Controls -->
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <label for="certThresholdInput" class="block text-xs font-bold text-heritage-navy mb-1">
+                🎖️ نسبة استحقاق شهادة التقدير (%):
+              </label>
+              <div class="flex items-center gap-2">
+                <input type="number" id="certThresholdInput" min="50" max="100" value="95" class="w-20 px-2 py-1 border rounded text-center font-bold">
+                <button onclick="saveCertThreshold()" class="px-3 py-1 bg-heritage-emerald text-white rounded text-xs font-bold hover:bg-blue-700">حفظ النسبة</button>
+              </div>
+            </div>
+
+            <!-- Print Questions Exam Options -->
+            <div class="flex flex-wrap items-center gap-2">
+              <button onclick="printQuestionsSheet(false)" class="px-3 py-2 bg-heritage-azure text-white rounded-lg text-xs font-bold hover:bg-indigo-700 transition flex items-center gap-1 shadow-sm">
+                <span>📄 تحميل ورقة الأسئلة للطباعة (بدون حل)</span>
+              </button>
+              <button onclick="printQuestionsSheet(true)" class="px-3 py-2 bg-blue-700 text-white rounded-lg text-xs font-bold hover:bg-blue-800 transition flex items-center gap-1 shadow-sm">
+                <span>📑 تحميل بنك الأسئلة بنموذج الإجابة (PDF)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Analysis of Most Missed Questions -->
+          <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+            <h4 class="font-bold text-red-900 text-sm mb-2 flex items-center gap-1">
+              <span>⚠️ تقرير الأسئلة التي يكثر فيها خطأ الطلاب:</span>
+            </h4>
+            <div id="missedQuestionsAnalysis" class="space-y-2 text-xs text-slate-700 max-h-48 overflow-y-auto">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+
+          <!-- Student Logs Table -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="font-bold text-heritage-navy text-sm">سجل دخول ونتائج الطلاب التفصيلي:</h4>
+              <div class="flex gap-2">
+                <button onclick="downloadStudentLogCSV()" class="text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded font-bold">
+                  تصدير كملف Excel / CSV
+                </button>
+                <button onclick="clearStudentLogs()" class="text-xs bg-red-100 hover:bg-red-200 text-red-700 px-3 py-1 rounded font-bold">
+                  تصفير السجل
+                </button>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto border rounded-xl">
+              <table class="w-full text-right text-xs">
+                <thead class="bg-slate-100 text-slate-700 font-bold border-b">
+                  <tr>
+                    <th class="p-2.5">#</th>
+                    <th class="p-2.5">اسم الطالب</th>
+                    <th class="p-2.5">التاريخ والوقت</th>
+                    <th class="p-2.5">الدرجة</th>
+                    <th class="p-2.5">النسبة</th>
+                    <th class="p-2.5">عدد المحاولات</th>
+                    <th class="p-2.5">الحالة</th>
+                  </tr>
+                </thead>
+                <tbody id="studentLogsTableBody" class="divide-y divide-slate-200">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Printable Questions Bank Window / Container -->
+    <div id="questionsPrintContainer" class="hidden"></div>
+
+    <!-- CUSTOM DIALOG MODAL (رسائل التأكيد والتنبيه) -->
+    <div id="customDialogModal" class="hidden fixed inset-0 z-[100] bg-slate-900/80 flex items-center justify-center p-4 transition-opacity">
+      <div class="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full shadow-2xl text-center border-t-4 border-heritage-emerald relative">
+        <div id="customDialogIcon" class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+          ℹ️
+        </div>
+        <h3 id="customDialogTitle" class="text-xl font-bold text-heritage-navy mb-2 font-kufi">تنبيه</h3>
+        <p id="customDialogMessage" class="text-gray-600 text-sm mb-6 font-heritage">رسالة...</p>
+        <div id="customDialogButtons" class="flex gap-3 justify-center">
+          <!-- Buttons injected via JS -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    /* =========================================================
+       AUDIO SYNTHESIZER (Web Audio API - Self-Contained)
+       ========================================================= */
+    let audioCtx = null;
+    let isSoundEnabled = true;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function toggleAudio() {
+      isSoundEnabled = !isSoundEnabled;
+      const soundIcon = document.getElementById('soundIcon');
+      soundIcon.textContent = isSoundEnabled ? '🔊' : '🔇';
+    }
+
+    function playSound(type) {
+      if (!isSoundEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+
+        if (type === 'correct') {
+          const notes = [523.25, 659.25, 783.99, 1046.50];
+          notes.forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+
+            gain.gain.setValueAtTime(0, now + idx * 0.08);
+            gain.gain.linearRampToValueAtTime(0.2, now + idx * 0.08 + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.35);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now + idx * 0.08);
+            osc.stop(now + idx * 0.08 + 0.4);
+          });
+        } else if (type === 'wrong') {
+          [220, 180].forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.15);
+
+            gain.gain.setValueAtTime(0, now + idx * 0.15);
+            gain.gain.linearRampToValueAtTime(0.18, now + idx * 0.15 + 0.03);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.15 + 0.28);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now + idx * 0.15);
+            osc.stop(now + idx * 0.15 + 0.3);
+          });
+        } else if (type === 'click') {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(440, now);
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.08);
+        } else if (type === 'celebrate') {
+          [523.25, 659.25, 783.99, 1046.50, 1318.51].forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.1);
+            gain.gain.setValueAtTime(0, now + idx * 0.1);
+            gain.gain.linearRampToValueAtTime(0.25, now + idx * 0.1 + 0.04);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.6);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(now + idx * 0.1);
+            osc.stop(now + idx * 0.1 + 0.65);
+          });
+        }
+      } catch (e) {
+        console.debug('Web Audio API notification:', e);
+      }
+    }
+
+    /* =========================================================
+       STREAMING_CHUNK:Building the Question Bank...
+       ========================================================= */
+    const QUESTIONS_BANK = [
+      {
+        id: 1,
+        topic: "مفهوم المفعول به",
+        text: "المفعولُ بهِ هو اسمٌ يدلُّ على:",
+        options: [
+          "من فَعَلَ الفِعْلَ",
+          "مَنْ وَقَعَ عَلَيْهِ فِعْلُ الفَاعِلِ",
+          "زَمَانِ حُدُوثِ الفِعْلِ",
+          "مَكَانِ حُدُوثِ الفِعْلِ"
+        ],
+        answer: 1,
+        explanation: "المفعول به هو الاسم المنصوب الذي يدل على من وقع عليه فعل الفاعل، مثل: (قَرَأَ الطَّالِبُ الدَّرْسَ).",
+        svgType: "book"
+      },
+      {
+        id: 2,
+        topic: "المفعول به المفرد",
+        text: "حَصَدَ الفَلَّاحُ المَحْصُولَ. إعراب كلمة (المَحْصُولَ):",
+        options: [
+          "مفعول به منصوب وعلامة نصبه الفتحة",
+          "فاعل مرفوع وعلامة رفعه الضمة",
+          "مبتدأ مرفوع وعلامة رفعه الضمة",
+          "اسم مجرور وعلامة جره الكسرة"
+        ],
+        answer: 0,
+        explanation: "المحصول: اسم مفرد وقع عليه فعل الحصد، فهو مفعول به منصوب وعلامة نصبه الفتحة الظاهرة.",
+        svgType: "harvest"
+      },
+      {
+        id: 3,
+        topic: "جمع التكسير",
+        text: "يُعَالِجُ الأَطِبَّاءُ المَرْضَى. علامة نصب المفعول به (المَرْضَى) هي الفتحة؛ لأنه:",
+        options: [
+          "مفرد",
+          "جمع تكسير",
+          "جمع مذكر سالم",
+          "جمع مؤنث سالم"
+        ],
+        answer: 1,
+        explanation: "كلمة (المرضى) جمع تكسير (مفردها مريض)، وجمع التكسير ينصب بالفتحة كالمفرد تماماً.",
+        svgType: "hospital"
+      },
+      {
+        id: 4,
+        topic: "المفعول به المثنى",
+        text: "رَسَمَ الفَنَّانُ لَوْحَتَيْنِ جَمِيلَتَيْنِ. علامة نصب المفعول به (لَوْحَتَيْنِ) هي:",
+        options: [
+          "الكسرة",
+          "الألف",
+          "الياء",
+          "الفتحة"
+        ],
+        answer: 2,
+        explanation: "لوحتين: مثنى يدل على اثنتين، والمثنى يُنصب وعلامة نصبه الياء.",
+        svgType: "palette"
+      },
+      {
+        id: 5,
+        topic: "جمع المذكر السالم",
+        text: "يُكَرِّمُ المُدِيرُ المُتَفَوِّقِينَ. علامة نصب كلمة (المُتَفَوِّقِينَ):",
+        options: [
+          "الواو؛ لأنه جمع مذكر سالم",
+          "الياء؛ لأنه جمع مذكر سالم",
+          "الفتحة؛ لأنه جمع تكسير",
+          "الكسرة؛ لأنه جمع مؤنث سالم"
+        ],
+        answer: 1,
+        explanation: "المتفوقين: جمع مذكر سالم وقع مفعولاً به، وعلامة نصبه الياء.",
+        svgType: "trophy"
+      },
+      {
+        id: 6,
+        topic: "جمع المؤنث السالم",
+        text: "كَافَأَتِ المُعَلِّمَةُ التِّلْمِيذَاتِ المُجْتَهِدَاتِ. علامة نصب (التِّلْمِيذَاتِ):",
+        options: [
+          "الفتحة الظاهرة",
+          "الكسرة نيابة عن الفتحة",
+          "الياء",
+          "الألف"
+        ],
+        answer: 1,
+        explanation: "جمع المؤنث السالم ينصب وعلامة نصبه الكسرة نيابة عن الفتحة.",
+        svgType: "school"
+      },
+      {
+        id: 7,
+        topic: "الضبط بالشكل",
+        text: "اخْتَرْ الضَّبْطَ الصَّحِيحَ لِلْمَفْعُولِ بِهِ فِي: (قَرَأَ أَحْمَدُ ........)",
+        options: [
+          "القِصَّةُ",
+          "القِصَّةِ",
+          "القِصَّةَ",
+          "القِصَّتَانِ"
+        ],
+        answer: 2,
+        explanation: "المفعول به المفرد ينصب بالفتحة، فالضبط الصحيح: (القِصَّةَ).",
+        svgType: "book"
+      },
+      {
+        id: 8,
+        topic: "تمييز الفاعل من المفعول به",
+        text: "حَمَلَ الكَأْسَ لَاعِبُ الفَرِيقِ. المفعول به في الجملة هو:",
+        options: [
+          "الفَرِيقِ",
+          "لَاعِبُ",
+          "الكَأْسَ",
+          "حَمَلَ"
+        ],
+        answer: 2,
+        explanation: "من الذي حَمَل؟ اللاعب (فاعل مرفوع). ماذا حمل؟ الكأسَ (مفعول به منصوب تقدم على الفاعل).",
+        svgType: "trophy"
+      },
+      {
+        id: 9,
+        topic: "المفعول به المثنى",
+        text: "أَكْمَلَ الطَّالِبُ كِتَابَةَ الجُمْلَةِ: (اشْتَرَى أَبِي ...........)",
+        options: [
+          "كِتَابَانِ",
+          "كِتَابَيْنِ",
+          "كِتَابٌ",
+          "كِتَابٍ"
+        ],
+        answer: 1,
+        explanation: "الموقع الإعرابي مفعول به منصوب، والمثنى ينصب بالياء فنختار: (كِتَابَيْنِ).",
+        svgType: "book"
+      },
+      {
+        id: 10,
+        topic: "خداع النون في جمع التكسير",
+        text: "أَعْطَى الغَنِيُّ المَسَاكِينَ صَدَقَاتٍ. كلمة (المَسَاكِينَ) مفعول به منصوب بـ:",
+        options: [
+          "الياء؛ لأنه جمع مذكر سالم",
+          "الفتحة؛ لأنه جمع تكسير",
+          "الكسرة؛ لأنه جمع مؤنث سالم",
+          "الألف؛ لأنه مثنى"
+        ],
+        answer: 1,
+        explanation: "المساكين جمع تكسير مفرده (مسكين)، والنون أصلية فيه وليست علامة إعراب، لذلك ينصب بالفتحة.",
+        svgType: "give"
+      },
+      {
+        id: 11,
+        topic: "المفعول به وجمع المذكر السالم",
+        text: "شَجَّعَتِ الجَمَاهِيرُ ............ فِي المَلْعَبِ.",
+        options: [
+          "اللَّاعِبُونَ",
+          "اللَّاعِبِينَ",
+          "اللَّاعِبَانِ",
+          "اللَّاعِبُ"
+        ],
+        answer: 1,
+        explanation: "نحتاج إلى مفعول به منصوب، وجمع المذكر السالم ينصب بالياء فنختار: (اللَّاعِبِينَ).",
+        svgType: "sports"
+      },
+      {
+        id: 12,
+        topic: "تحديد المفعول به",
+        text: "نَامَ الطِّفْلُ عَلَى السَّرِيرِ. هذه الجملة تشتمل على:",
+        options: [
+          "مفعول به مفرد",
+          "مفعول به جمع تكسير",
+          "لا تشتمل على مفعول به",
+          "مفعول به مثنى"
+        ],
+        answer: 2,
+        explanation: "الفعل (نام) فعل لازم اكتفى بفاعله (الطفل) وجاء بعده جار ومجرور، ولم تحتوِ الجملة على مفعول به.",
+        svgType: "night"
+      },
+      {
+        id: 13,
+        topic: "ضبط جمع المؤنث السالم",
+        text: "رَكَّبَ المُهَنْدِسُ الآلَاتِ الحَدِيثَةَ. ضبط كلمة (الآلَاتِ) بالكسرة لأنها:",
+        options: [
+          "اسم مجرور بحرف الجر",
+          "فاعل مرفوع بالضمة",
+          "مفعول به منصوب بالكسرة",
+          "مبتدأ مؤخر"
+        ],
+        answer: 2,
+        explanation: "الآلاتِ مفعول به منصوب وعلامة نصبه الكسرة لأنه جمع مؤنث سالم.",
+        svgType: "gear"
+      },
+      {
+        id: 14,
+        topic: "علامة نصب المفعول به",
+        text: "يَنْتَظِمُ المِصْرِيُّونَ فِي زِيَارَةِ (المَتَاحِفِ). في جملة: (زَارَ السَّائِحُونَ المَتَاحِفَ)، إعراب المتاحف:",
+        options: [
+          "مفعول به منصوب وعلامة نصبه الفتحة",
+          "فاعل مرفوع وعلامة رفعه الضمة",
+          "مفعول به منصوب وعلامة نصبه الياء",
+          "خبر مرفوع وعلامة رفعه الضمة"
+        ],
+        answer: 0,
+        explanation: "المتاحفَ: جمع تكسير وقع مفعولاً به، فينصب بالفتحة الظاهرة.",
+        svgType: "monument"
+      },
+      {
+        id: 15,
+        topic: "نون المثنى ونون الجمع",
+        text: "نُونُ المُثَنَّى دَائِمًا ............. ، وَنُونُ جَمْعِ المُذَكَّرِ السَّالِمِ دَائِمًا ............. :",
+        options: [
+          "مَفْتُوحَةٌ - مَكْسُورَةٌ",
+          "مَكْسُورَةٌ - مَفْتُوحَةٌ",
+          "مَضْمُومَةٌ - سَاكِنَةٌ",
+          "سَاكِنَةٌ - مَفْتُوحَةٌ"
+        ],
+        answer: 1,
+        explanation: "قاعدة مقررة للصف الخامس: نون المثنى مكسورة دائماً (رَجُلَيْنِ)، ونون جمع المذكر السالم مفتوحة دائماً (مُهَنْدِسِينَ).",
+        svgType: "scroll"
+      },
+      {
+        id: 16,
+        topic: "تصويب الخطأ النحوي",
+        text: "صَوِّبِ الخَطَأَ فِي الجُمْلَةِ: (شَاهَدَ الطِّفْلَانِ عُصْفُورَانِ).",
+        options: [
+          "شَاهَدَا الطِّفْلَانِ عُصْفُورَانِ",
+          "شَاهَدَ الطِّفْلَيْنِ عُصْفُورَيْنِ",
+          "شَاهَدَ الطِّفْلَانِ عُصْفُورَيْنِ",
+          "شَاهَدُوا الأَطْفَالُ عُصْفُورَيْنِ"
+        ],
+        answer: 2,
+        explanation: "(الطفلان) فاعل مرفوع بالألف، و(عصفورين) مفعول به منصوب وعلامة نصبه الياء لأنه مثنى.",
+        svgType: "bird"
+      },
+      {
+        id: 17,
+        topic: "المفعول به المفرد",
+        text: "تَبْنِي الدَّوْلَةُ مَصْنَعًا جَدِيدًا. كلمة (مَصْنَعًا) تعرب:",
+        options: [
+          "مفعولاً به منصوباً بالفتحة",
+          "فاعلاً مرفوعاً بالضمة",
+          "مبتدأ ثانياً",
+          "ظرف مكان منصوب"
+        ],
+        answer: 0,
+        explanation: "مصنعاً: اسم مفرد وقع عليه فعل البناء، فهو مفعول به منصوب وعلامة نصبه الفتحة.",
+        svgType: "factory"
+      },
+      {
+        id: 18,
+        topic: "موقع المفعول به في الجملة",
+        text: "أَطْفَأَ مَصَابِيحَ الغُرْفَةِ الوَلَدُ. الفاعل في الجملة هو:",
+        options: [
+          "مَصَابِيحَ",
+          "الغُرْفَةِ",
+          "الوَلدُ",
+          "أَطْفَأَ"
+        ],
+        answer: 2,
+        explanation: "الولد هو الذي قام بالإطفاء فهو الفاعل، والمصابيح هي التي وقع عليها الإطفاء فهي مفعول به مقدم.",
+        svgType: "lamp"
+      },
+      {
+        id: 19,
+        topic: "جمع المؤنث السالم",
+        text: "يُحِبُّ اللهُ المُحْسِنَاتِ. الحركة التي وضعت تحت تاء (المُحْسِنَاتِ) هي:",
+        options: [
+          "الفتحة",
+          "الكسرة",
+          "الضمة",
+          "السكون"
+        ],
+        answer: 1,
+        explanation: "المحسنات جمع مؤنث سالم مفعول به منصوب، وعلامة نصبه الكسرة نيابة عن الفتحة.",
+        svgType: "heart"
+      },
+      {
+        id: 20,
+        topic: "المفعول به المثنى المؤنث",
+        text: "قَرَأَتْ فَاطِمَةُ ............ مُفِيدَتَيْنِ.",
+        options: [
+          "قِصَّتَانِ",
+          "قِصَّتَيْنِ",
+          "قِصَّةٌ",
+          "قِصَصٌ"
+        ],
+        answer: 1,
+        explanation: "المفعول به مثنى مؤنث منصوب وعلامة نصبه الياء: (قِصَّتَيْنِ).",
+        svgType: "book"
+      },
+      {
+        id: 21,
+        topic: "إعراب جمع التكسير",
+        text: "زَيَّنَ التَّلَامِيذُ الفُصُولَ. علامة إعراب كلمة (الفُصُولَ):",
+        options: [
+          "الفتحة؛ لأنه جمع تكسير",
+          "الكسرة؛ لأنه جمع مؤنث سالم",
+          "الواو؛ لأنه جمع مذكر سالم",
+          "الألف؛ لأنه مثنى"
+        ],
+        answer: 0,
+        explanation: "الفصول جمع تكسير مفعول به منصوب وعلامة نصبه الفتحة.",
+        svgType: "school"
+      },
+      {
+        id: 22,
+        topic: "تصويب الجملة",
+        text: "أَيُّ الجُمَلِ الآتِيَةِ ضُبِطَتْ بِشَكْلٍ صَحِيحٍ تَامٍّ؟",
+        options: [
+          "يَرْفَعُ الجُنُودُ العَلَمَ",
+          "يَرْفَعُ الجُنُودَ العَلَمُ",
+          "يَرْفَعَ الجُنُودُ العَلَمِ",
+          "يَرْفَعُ الجُنُودِ العَلَمَ"
+        ],
+        answer: 0,
+        explanation: "الفاعل مرفوع بالضمة (الجنودُ)، والمفعول به منصوب بالفتحة (العلمَ).",
+        svgType: "flag"
+      },
+      {
+        id: 23,
+        topic: "جمع المذكر السالم",
+        text: "وَدَّعَ المُسَافِرُونَ الأَهْلَ وَالصَّدِيقَ. إذا جعلنا (المودَّعين) مفعولاً به نقول:",
+        options: [
+          "اسْتَقْبَلَ النَّاسُ المُسَافِرُونَ",
+          "اسْتَقْبَلَ النَّاسُ المُسَافِرِينَ",
+          "اسْتَقْبَلَ المُسَافِرِينَ النَّاسُ بالحفل",
+          "المُسَافِرُونَ اسْتَقْبَلُوا النَّاسَ"
+        ],
+        answer: 1,
+        explanation: "(المسافرين) مفعول به منصوب وعلامة نصبه الياء لأنه جمع مذكر سالم.",
+        svgType: "airplane"
+      },
+      {
+        id: 24,
+        topic: "أركان الجملة الفعلية",
+        text: "الجُمْلَةُ الفِعْلِيَّةُ تَتَكَوَّنُ مِنْ رُكْنَيْنِ أَسَاسِيَّيْنِ هُمَا:",
+        options: [
+          "المبتدأ والخبر",
+          "الفعل والمفعول به",
+          "الفعل والفاعل",
+          "الفاعل والظرف"
+        ],
+        answer: 2,
+        explanation: "الركنان الأساسيان للجملة الفعلية هما (الفعل والفاعل)، أما المفعول به فقد تأتي الجملة به وقد تستغني عنه.",
+        svgType: "scroll"
+      },
+      {
+        id: 25,
+        topic: "المفعول به المفرد المؤنث",
+        text: "رَتَّبَتْ عَائِشَةُ الغُرْفَةَ صَبَاحًا. المفعول به في هذه الجملة هو:",
+        options: [
+          "عَائِشَةُ",
+          "الغُرْفَةَ",
+          "صَبَاحًا",
+          "رَتَّبَتْ"
+        ],
+        answer: 1,
+        explanation: "الغرفةَ: اسم وقع عليه فعل الترتيب، فهو مفعول به منصوب بالفتحة. (صباحاً ظرف زمان).",
+        svgType: "home"
+      },
+      {
+        id: 26,
+        topic: "الياء علامة نصب مشتركة",
+        text: "تَكُونُ (اليَاءُ) عَلَامَةَ نَصْبٍ لِلْمَفْعُولِ بِهِ فِي حَالَتَيْنِ، هُمَا:",
+        options: [
+          "المفرد والمثنى",
+          "المثنى وجمع المذكر السالم",
+          "جمع المؤنث السالم وجمع التكسير",
+          "المفرد وجمع التكسير"
+        ],
+        answer: 1,
+        explanation: "الياء علامة فرعية تنصب بها الأسماء في حالتين: المثنى (رجلين) وجمع المذكر السالم (معلمين).",
+        svgType: "tree"
+      },
+      {
+        id: 27,
+        topic: "جمع التكسير والأشجار",
+        text: "غَرَسَ التَّلَامِيذُ الأَشْجَارَ فِي حَدِيقَةِ المَدْرَسَةِ. كلمة (الأَشْجَارَ):",
+        options: [
+          "مفعول به منصوب وعلامة نصبه الفتحة",
+          "فاعل مرفوع وعلامة رفعه الضمة",
+          "اسم مجرور بحرف الجر وعلامة جره الكسرة",
+          "خبر المبتدأ مرفوع بالضمة"
+        ],
+        answer: 0,
+        explanation: "الأشجارَ: جمع تكسير وقع مفعولاً به منصوباً وعلامة نصبه الفتحة.",
+        svgType: "tree"
+      },
+      {
+        id: 28,
+        topic: "المفعول به بعد الجار والمجرور",
+        text: "قَدَّمَ المُعَلِّمُ لِلتَّلَامِيذِ نَصِيحَتَيْنِ غَالِيَتَيْنِ. المفعول به هو:",
+        options: [
+          "المُعَلِّمُ",
+          "لِلتَّلَامِيذِ",
+          "نَصِيحَتَيْنِ",
+          "غَالِيَتَيْنِ"
+        ],
+        answer: 2,
+        explanation: "ماذا قدم المعلم للتلاميذ؟ قدم (نصيحتين)؛ فهي مفعول به منصوب وعلامة نصبه الياء لأنه مثنى.",
+        svgType: "scroll"
+      },
+      {
+        id: 29,
+        topic: "جمع المؤنث السالم",
+        text: "شَاهَدْتُ السَّابِحَاتِ المَاهِرَاتِ. علامة نصب المفعول به هنا:",
+        options: [
+          "الفتحة الظاهرة",
+          "الكسرة نيابة عن الفتحة",
+          "الياء",
+          "السكون"
+        ],
+        answer: 1,
+        explanation: "(السابحاتِ) جمع مؤنث سالم مفعول به منصوب وعلامة نصبه الكسرة.",
+        svgType: "sports"
+      },
+      {
+        id: 30,
+        topic: "المفعول به والفاعل",
+        text: "يَنَالُ الصَّابِرُونَ الأَجْرَ. علامة رفع الفاعل وعلامة نصب المفعول به على الترتيب:",
+        options: [
+          "الواو - الفتحة",
+          "الضمة - الفتحة",
+          "الواو - الكسرة",
+          "الألف - الياء"
+        ],
+        answer: 0,
+        explanation: "الفاعل (الصابرون) جمع مذكر سالم مرفوع بالواو، والمفعول به (الأجرَ) مفرد منصوب بالفتحة.",
+        svgType: "star"
+      },
+      {
+        id: 31,
+        topic: "علامة النصب الأصلية",
+        text: "العَلَامَةُ الأَصْلِيَّةُ لِنَصْبِ المَفْعُولِ بِهِ هِيَ:",
+        options: [
+          "الكسرة",
+          "الياء",
+          "الفتحة",
+          "الألف"
+        ],
+        answer: 2,
+        explanation: "الفتحة هي علامة النصب الأصلية، بينما الياء والكسرة في جمع المؤنث السالم علامتان فرعيتان.",
+        svgType: "scale"
+      },
+      {
+        id: 32,
+        topic: "المفعول به المثنى المذكر",
+        text: "عَاقَبَ القَاضِي اللِّصَّيْنِ. إعراب كلمة (اللِّصَّيْنِ):",
+        options: [
+          "فاعل مرفوع وعلامة رفعه الألف",
+          "مفعول به منصوب وعلامة نصبه الياء",
+          "مفعول به منصوب وعلامة نصبه الفتحة",
+          "خبر مرفوع بالياء"
+        ],
+        answer: 1,
+        explanation: "اللصين: مثنى وقع عليه فعل العقاب، فهو مفعول به منصوب بالياء.",
+        svgType: "scale"
+      },
+      {
+        id: 33,
+        topic: "جمع المذكر السالم",
+        text: "شَكَرَ المَرِيضُ الأَطِبَّاءَ وَالمُمَرِّضِينَ. المفعول به في هذه الجملة هو:",
+        options: [
+          "المَرِيضُ",
+          "الأَطِبَّاءَ",
+          "المُمَرِّضِينَ",
+          "شَكَرَ"
+        ],
+        answer: 1,
+        explanation: "الأطباءَ: هو الاسم الذي وقع عليه الشكر مباشرة فهو المفعول به، والممرضين معطوف منصوب.",
+        svgType: "hospital"
+      },
+      {
+        id: 34,
+        topic: "تحديد علامة جمع المؤنث",
+        text: "تَسْتَقْبِلُ المُسْتَشْفَى حَالَاتٍ كَثِيرَةً. إعراب (حَالَاتٍ):",
+        options: [
+          "مفعول به منصوب وعلامة نصبه الكسرة",
+          "فاعل مرفوع وعلامة رفعه الضمة",
+          "مفعول به منصوب وعلامة نصبه الفتحة",
+          "ظرف مكان منصوب"
+        ],
+        answer: 0,
+        explanation: "(حالاتٍ) جمع مؤنث سالم وقع مفعولاً به منصوباً بالكسرة.",
+        svgType: "hospital"
+      },
+      {
+        id: 35,
+        topic: "إكمال الفراغ بمفعول به صحيح",
+        text: "أَنْشَأَ المُهَنْدِسُونَ ............ سَكَنِيَّيْنِ.",
+        options: [
+          "بُرْجَانِ",
+          "بُرْجَيْنِ",
+          "بُرْجٌ",
+          "أَبْرَاجًا"
+        ],
+        answer: 1,
+        explanation: "النعت (سكنيين) مثنى منصوب بالياء، إذن المنعوت المفعول به مثنى منصوب بالياء: (بُرْجَيْنِ).",
+        svgType: "building"
+      },
+      {
+        id: 36,
+        topic: "خداع الكلمات المنتهية بياء ونون",
+        text: "فَهِمَ التَّلَامِيذُ القَوَانِينَ. كلمة (القَوَانِينَ) مفعول به منصوب بـ:",
+        options: [
+          "الياء؛ لأنه جمع مذكر سالم",
+          "الفتحة؛ لأنه جمع تكسير",
+          "الكسرة؛ لأنه جمع مؤنث سالم",
+          "الألف؛ لأنه مثنى"
+        ],
+        answer: 1,
+        explanation: "القوانين جمع تكسير مفرده (قانون)، فالنون أصلية وليست علامة إعراب، وعلامة نصبه الفتحة.",
+        svgType: "scroll"
+      },
+      {
+        id: 37,
+        topic: "الجملة مع الضمير المتصل",
+        text: "سَمِعْتُ الأَخْبَارَ فِي المِذْيَاعِ. الفاعل في الجملة هو:",
+        options: [
+          "الأَخْبَارَ",
+          "تَاءُ الفَاعِلِ فِي (سَمِعْتُ)",
+          "المِذْيَاعِ",
+          "ضمير مستتر تقديره هو"
+        ],
+        answer: 1,
+        explanation: "تاء الفاعل هي الفاعل المتصل، أما (الأخبارَ) فهي جمع تكسير مفعول به منصوب بالفتحة.",
+        svgType: "radio"
+      },
+      {
+        id: 38,
+        topic: "جمع المؤنث السالم",
+        text: "نَظَّمَتِ المَدْرَسَةُ نَدَوَاتٍ ثَقَافِيَّةً. علامة نصب (نَدَوَاتٍ):",
+        options: [
+          "الكسرة؛ لأنها جمع مؤنث سالم",
+          "الفتحة؛ لأنها مفرد",
+          "الياء؛ لأنها جمع مذكر سالم",
+          "الضمة؛ لأنها فاعل"
+        ],
+        answer: 0,
+        explanation: "ندواتٍ مفعول به منصوب وعلامة نصبه الكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم.",
+        svgType: "school"
+      },
+      {
+        id: 39,
+        topic: "علامة نصب المفعول به المثنى",
+        text: "كَتَبَ الأَدِيبُ مَقَالَتَيْنِ فِي الجَرِيدَةِ. المفعول به منصوب بـ:",
+        options: [
+          "الألف",
+          "الفتحة",
+          "الياء",
+          "الكسرة"
+        ],
+        answer: 2,
+        explanation: "مقالتين: مثنى مؤنث وقع مفعولاً به، وعلامة نصبه الياء.",
+        svgType: "pencil"
+      },
+      {
+        id: 40,
+        topic: "شامل لكل علامات إعراب المفعول به",
+        text: "عَلَامَاتُ نَصْبِ المَفْعُولِ بِهِ هِيَ:",
+        options: [
+          "الضمة والألف والواو",
+          "الفتحة والكسرة والياء",
+          "الفتحة والضمة والياء",
+          "الكسرة والسكون والواو"
+        ],
+        answer: 1,
+        explanation: "علامات نصب المفعول به: الفتحة (للمفرد وجمع التكسير)، والكسرة (لجمع المؤنث السالم)، والياء (للمثنى وجمع المذكر السالم).",
+        svgType: "certificate"
+      }
+    ];
+
+    /* =========================================================
+       DYNAMIC INLINE SVGS FOR EDUCATIONAL ILLUSTRATION
+       ========================================================= */
+    function getQuestionIllustrationSVG(type) {
+      switch (type) {
+        case 'book':
+          return `<svg class="w-20 h-20 text-heritage-emerald animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>`;
+        case 'harvest':
+          return `<svg class="w-20 h-20 text-heritage-goldDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9m0 0a3 3 0 100 6 3 3 0 000-6z"/>
+          </svg>`;
+        case 'trophy':
+          return `<svg class="w-20 h-20 text-heritage-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+          </svg>`;
+        case 'scale':
+          return `<svg class="w-20 h-20 text-heritage-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+          </svg>`;
+        case 'tree':
+          return `<svg class="w-20 h-20 text-heritage-emeraldLight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 19h14M12 19V11m-6-2c0-3.314 2.686-6 6-6s6 2.686 6 6c0 1.916-.897 3.623-2.3 4.735A6.004 6.004 0 0112 17a6.004 6.004 0 01-3.7-1.265C6.897 12.623 6 10.916 6 9z"/>
+          </svg>`;
+        case 'school':
+          return `<svg class="w-20 h-20 text-heritage-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>`;
+        default:
+          return `<svg class="w-20 h-20 text-heritage-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>`;
+      }
+    }
+
+    /* =========================================================
+       GAMEPLAY STATE VARIABLES
+       ========================================================= */
+    let currentStudentName = "";
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let studentAnswersHistory = [];
+    let mistakesList = [];
+    let certThreshold = 95;
+
+    // Teacher dashboard session/cache (remote data lives in Cloudflare D1)
+    let teacherLogsCache = [];
+    let teacherMissedStatsCache = {};
+    let adminSessionPassword = "";
+
+    const QUIZ_TITLE = 'اختبار المفعول به - الصف الخامس الابتدائي';
+
+    function isOnlineApp() {
+      return /^https?:$/.test(window.location.protocol);
+    }
+
+    async function callQuizApi(endpoint, payload = {}, timeoutMs = 15000) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetch(`/${endpoint}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        });
+
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(data.error || `HTTP ${response.status}`);
+        }
+        return data;
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    function showCloudSaveState(message, tone = 'info') {
+      const existing = document.getElementById('cloudSaveStatus');
+      if (!existing) return;
+      existing.textContent = message;
+      existing.className = `text-xs mt-2 ${tone === 'error' ? 'text-red-600' : 'text-slate-500'}`;
+    }
+
+    // On window load
+    window.addEventListener('load', () => {
+      // Set Arabic localized dynamic date
+      const today = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+      const formattedDate = today.toLocaleDateString('ar-EG', options);
+      document.getElementById('currentDateDisplay').textContent = formattedDate;
+
+      // Online mode: fetch the current certificate threshold from Cloudflare.
+      if (isOnlineApp()) {
+        callQuizApi('get-config', {})
+          .then((config) => {
+            if (config && Number.isFinite(Number(config.threshold))) {
+              certThreshold = Number(config.threshold);
+              const input = document.getElementById('certThresholdInput');
+              if (input) input.value = certThreshold;
+            }
+          })
+          .catch((err) => console.error('Cloud config error:', err));
+      }
+    });
+
+    /* =========================================================
+       STREAMING_CHUNK:Handling Quiz Progression and User Actions...
+       ========================================================= */
+    function startQuiz() {
+      const nameInput = document.getElementById('studentNameInput');
+      const nameVal = nameInput.value.trim();
+      const errorMsg = document.getElementById('nameError');
+
+      if (!nameVal) {
+        errorMsg.classList.remove('hidden');
+        nameInput.focus();
+        return;
+      }
+
+      errorMsg.classList.add('hidden');
+      currentStudentName = nameVal;
+      currentQuestionIndex = 0;
+      score = 0;
+      studentAnswersHistory = [];
+      mistakesList = [];
+
+      document.getElementById('quizStudentNameDisplay').textContent = currentStudentName;
+      document.getElementById('welcomeScreen').classList.add('hidden');
+      document.getElementById('resultsScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('hidden');
+
+      playSound('click');
+      loadQuestion(currentQuestionIndex);
+    }
+
+    function loadQuestion(index) {
+      if (index >= QUESTIONS_BANK.length) {
+        finishQuiz();
+        return;
+      }
+
+      const q = QUESTIONS_BANK[index];
+
+      // Update counters & progress
+      document.getElementById('currentQuestionNumber').textContent = index + 1;
+      document.getElementById('liveScore').textContent = score;
+      const progressPercent = ((index) / QUESTIONS_BANK.length) * 100;
+      document.getElementById('progressBarFill').style.width = `${progressPercent}%`;
+
+      // Update badge & question text
+      document.getElementById('questionTopicBadge').textContent = q.topic;
+      document.getElementById('questionText').textContent = `${index + 1}) ${q.text}`;
+
+      // Set Illustration
+      document.getElementById('questionIllustration').innerHTML = getQuestionIllustrationSVG(q.svgType);
+
+      // Hide feedback box and reset Next button
+      const feedbackBox = document.getElementById('feedbackBox');
+      feedbackBox.classList.add('hidden');
+      feedbackBox.className = "hidden rounded-xl p-4 mb-5 border-2 text-right transition-all duration-300";
+
+      const nextBtn = document.getElementById('nextQuestionBtn');
+      nextBtn.disabled = true;
+      document.getElementById('nextBtnText').textContent = (index === QUESTIONS_BANK.length - 1) ? 'عرض النتيجة النهائية 🏁' : 'السؤال التالي ←';
+
+      // Render 4 shuffled or fixed position options
+      const optionsContainer = document.getElementById('optionsContainer');
+      optionsContainer.innerHTML = '';
+
+      q.options.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.className = `option-button w-full p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-heritage-gold hover:bg-sky-50/50 text-right font-semibold text-slate-800 transition-all flex items-center justify-between group shadow-sm text-sm md:text-base`;
+        btn.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full border border-heritage-gold/50 bg-heritage-parchment text-heritage-navy flex items-center justify-center font-bold text-xs group-hover:bg-heritage-gold group-hover:text-white transition">
+              ${['أ', 'ب', 'ج', 'د'][optIdx]}
+            </span>
+            <span class="font-heritage text-lg">${optText}</span>
+          </div>
+          <span class="indicator-icon opacity-0 transition text-lg">⚪</span>
+        `;
+
+        btn.onclick = () => selectOption(optIdx, btn);
+        optionsContainer.appendChild(btn);
+      });
+    }
+
+    function selectOption(selectedIndex, selectedBtn) {
+      const q = QUESTIONS_BANK[currentQuestionIndex];
+      const buttons = document.querySelectorAll('.option-button');
+
+      // Disable all options after picking
+      buttons.forEach(btn => btn.disabled = true);
+
+      const isCorrect = (selectedIndex === q.answer);
+      const feedbackBox = document.getElementById('feedbackBox');
+      const feedbackIcon = document.getElementById('feedbackIcon');
+      const feedbackTitle = document.getElementById('feedbackTitle');
+      const feedbackExplanation = document.getElementById('feedbackExplanation');
+
+      // Update question history
+      studentAnswersHistory.push({
+        questionId: q.id,
+        questionText: q.text,
+        chosenOption: q.options[selectedIndex],
+        chosenOptionIndex: selectedIndex,
+        correctOption: q.options[q.answer],
+        isCorrect: isCorrect,
+        explanation: q.explanation
+      });
+
+      if (isCorrect) {
+        score++;
+        document.getElementById('liveScore').textContent = score;
+        playSound('correct');
+
+        // Style selected correct button
+        selectedBtn.classList.remove('border-slate-200', 'bg-white');
+        selectedBtn.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-900', 'ring-2', 'ring-blue-300');
+        selectedBtn.querySelector('.indicator-icon').textContent = '✅';
+        selectedBtn.querySelector('.indicator-icon').classList.remove('opacity-0');
+
+        // Show Positive Feedback
+        feedbackBox.classList.remove('hidden');
+        feedbackBox.classList.add('bg-blue-50', 'border-blue-400', 'text-blue-900');
+        feedbackIcon.textContent = '🎉';
+        feedbackTitle.textContent = 'أَحْسَنْتَ يَا بَطَلَ النَّحْوِ! إِجَابَةٌ صَحِيحَةٌ وَمُتْقَنَةٌ';
+        feedbackExplanation.textContent = q.explanation;
+      } else {
+        playSound('wrong');
+        mistakesList.push(q);
+        if (!isOnlineApp()) recordMistakeInStats(q.id);
+
+        // Style wrong button
+        selectedBtn.classList.remove('border-slate-200', 'bg-white');
+        selectedBtn.classList.add('border-red-500', 'bg-red-50', 'text-red-900', 'ring-2', 'ring-red-300');
+        selectedBtn.querySelector('.indicator-icon').textContent = '❌';
+        selectedBtn.querySelector('.indicator-icon').classList.remove('opacity-0');
+
+        // Highlight correct button
+        const correctBtn = buttons[q.answer];
+        if (correctBtn) {
+          correctBtn.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-900');
+          correctBtn.querySelector('.indicator-icon').textContent = '✅';
+          correctBtn.querySelector('.indicator-icon').classList.remove('opacity-0');
+        }
+
+        // Show Educational Correction Feedback
+        feedbackBox.classList.remove('hidden');
+        feedbackBox.classList.add('bg-sky-50', 'border-sky-400', 'text-sky-950');
+        feedbackIcon.textContent = '💡';
+        feedbackTitle.textContent = `انْتَبِهْ يَا ذَكِيُّ! الإِجَابَةُ الصَّحِيحَةُ هِيَ: [ ${q.options[q.answer]} ]`;
+        feedbackExplanation.textContent = q.explanation;
+      }
+
+      // Enable Next Button
+      document.getElementById('nextQuestionBtn').disabled = false;
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      playSound('click');
+      loadQuestion(currentQuestionIndex);
+    }
+
+    /* =========================================================
+       STREAMING_CHUNK:Custom Alert and Confirm Dialogs...
+       ========================================================= */
+    function showCustomDialog(type, title, message, onConfirmCallback) {
+      const modal = document.getElementById('customDialogModal');
+      const icon = document.getElementById('customDialogIcon');
+      const titleEl = document.getElementById('customDialogTitle');
+      const msgEl = document.getElementById('customDialogMessage');
+      const btnContainer = document.getElementById('customDialogButtons');
+
+      titleEl.textContent = title;
+      msgEl.textContent = message;
+      btnContainer.innerHTML = '';
+
+      if (type === 'confirm') {
+        icon.className = "w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm";
+        icon.textContent = "⚠️";
+        
+        const confirmBtn = document.createElement('button');
+        confirmBtn.className = "px-5 py-2.5 rounded-xl bg-heritage-emerald text-white font-bold hover:bg-heritage-emeraldLight transition shadow flex-1";
+        confirmBtn.textContent = "نعم، متأكد";
+        confirmBtn.onclick = () => {
+          playSound('click');
+          closeCustomDialog();
+          if(onConfirmCallback) onConfirmCallback();
+        };
+
+        const cancelBtn = document.createElement('button');
+        cancelBtn.className = "px-5 py-2.5 rounded-xl bg-slate-200 text-slate-700 font-bold hover:bg-slate-300 transition flex-1";
+        cancelBtn.textContent = "تراجع";
+        cancelBtn.onclick = () => {
+          playSound('click');
+          closeCustomDialog();
+        };
+
+        btnContainer.appendChild(confirmBtn);
+        btnContainer.appendChild(cancelBtn);
+      } else {
+        icon.className = "w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-sm";
+        icon.textContent = "ℹ️";
+
+        const okBtn = document.createElement('button');
+        okBtn.className = "px-5 py-2.5 rounded-xl bg-heritage-emerald text-white font-bold hover:bg-heritage-emeraldLight transition shadow w-full";
+        okBtn.textContent = "حسناً";
+        okBtn.onclick = () => {
+          playSound('click');
+          closeCustomDialog();
+        };
+
+        btnContainer.appendChild(okBtn);
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeCustomDialog() {
+      document.getElementById('customDialogModal').classList.add('hidden');
+    }
+
+    function confirmExitQuiz() {
+      showCustomDialog('confirm', 'إنهاء الاختبار مبكراً؟', 'هل تريد بالتأكيد إنهاء الاختبار الآن وحساب النتيجة بناءً على ما أجبته فقط؟', () => {
+        finishQuiz();
+      });
+    }
+
+    /* =========================================================
+       STREAMING_CHUNK:Computing Results and Certificate Eligibility...
+       ========================================================= */
+    function finishQuiz() {
+      document.getElementById('quizScreen').classList.add('hidden');
+      document.getElementById('resultsScreen').classList.remove('hidden');
+
+      const totalQuestions = QUESTIONS_BANK.length;
+      const percentage = Math.round((score / totalQuestions) * 100);
+
+      document.getElementById('finalScoreDisplay').textContent = score;
+      document.getElementById('finalPercentageDisplay').textContent = `${percentage}%`;
+
+      const badge = document.getElementById('performanceBadge');
+      const message = document.getElementById('performanceMessage');
+      const emoji = document.getElementById('resultEmoji');
+      const certBtn = document.getElementById('viewCertificateBtn');
+
+      if (percentage >= 90) {
+        badge.className = "py-2.5 px-4 rounded-lg font-bold text-base mb-3 bg-blue-100 text-blue-800 border border-blue-300";
+        badge.textContent = "التَّقْدِيرُ: مُمْتَازٌ 🌟";
+        message.textContent = "مبارك يا بطل لغة الضاد! أداء استثنائي يعكس تمكنك الكامل والعميق من قواعد المفعول به بحالاته وعلامات إعرابه.";
+        emoji.textContent = "👑";
+      } else if (percentage >= 70) {
+        badge.className = "py-2.5 px-4 rounded-lg font-bold text-base mb-3 bg-sky-100 text-sky-800 border border-sky-300";
+        badge.textContent = "التَّقْدِيرُ: جَيِّدٌ جِدًّا 👍";
+        message.textContent = "أداء طيب ومميز جداً! أنت على بعد خطوة بسيطة من الإتقان التام. راجع الأسئلة التي أخطأت فيها لترسخ معلوماتك.";
+        emoji.textContent = "🥈";
+      } else {
+        badge.className = "py-2.5 px-4 rounded-lg font-bold text-base mb-3 bg-slate-100 text-slate-800 border border-slate-300";
+        badge.textContent = "التَّقْدِيرُ: حَاوِلْ مَرَّةً أُخْرَى 💪";
+        message.textContent = "جهد مقدر، ولكن القواعد تحتاج إلى مزيد من التركيز والممارسة. راجع تصويبات الأسئلة وأعد الاختبار لتصل للدرجة النهائية!";
+        emoji.textContent = "🌱";
+      }
+
+      // Check certificate qualification
+      if (percentage >= certThreshold) {
+        certBtn.classList.remove('hidden');
+        playSound('celebrate');
+      } else {
+        certBtn.classList.add('hidden');
+      }
+
+      // Populate mistakes review
+      document.getElementById('mistakesCountBadge').textContent = mistakesList.length;
+      renderMistakesList();
+
+      // Save the complete attempt centrally.
+      saveStudentResultOnline(totalQuestions, percentage);
+    }
+
+    function renderMistakesList() {
+      const container = document.getElementById('mistakesContainer');
+      container.innerHTML = '';
+
+      if (mistakesList.length === 0) {
+        container.innerHTML = `
+          <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-center text-blue-800 font-bold">
+            ما شاء الله! لا توجد أي أخطاء، إجاباتك كلها صحيحة 100% 🏅
+          </div>
+        `;
+        return;
+      }
+
+      const mistakesDetails = studentAnswersHistory.filter(item => !item.isCorrect);
+
+      mistakesDetails.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = "bg-white p-4 rounded-xl border border-red-200 shadow-sm text-right";
+        div.innerHTML = `
+          <div class="font-bold text-slate-900 mb-1 text-sm md:text-base">
+            <span class="text-red-600 font-bold ml-1">[${idx + 1}]</span> ${item.questionText}
+          </div>
+          <div class="text-xs md:text-sm text-red-600 font-semibold mb-1">
+            ❌ إجابتك: <span class="line-through">${item.chosenOption}</span>
+          </div>
+          <div class="text-xs md:text-sm text-blue-700 font-bold mb-2">
+            ✅ الصواب: <span>${item.correctOption}</span>
+          </div>
+          <div class="text-xs text-slate-600 bg-sky-50 p-2.5 rounded-lg border border-sky-200">
+            <strong>الشرح والتوضيح:</strong> ${item.explanation}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function toggleMistakesReview() {
+      const sec = document.getElementById('mistakesReviewSection');
+      sec.classList.toggle('hidden');
+      if (!sec.classList.contains('hidden')) {
+        sec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function restartQuiz() {
+      playSound('click');
+      document.getElementById('resultsScreen').classList.add('hidden');
+      document.getElementById('welcomeScreen').classList.remove('hidden');
+      document.getElementById('studentNameInput').value = currentStudentName;
+    }
+
+    /* =========================================================
+       STREAMING_CHUNK:Handling Certificate Generation and Modal...
+       ========================================================= */
+    function openCertificateView() {
+      playSound('click');
+      const totalQuestions = QUESTIONS_BANK.length;
+      const percentage = Math.round((score / totalQuestions) * 100);
+
+      document.getElementById('certStudentName').textContent = currentStudentName;
+      document.getElementById('certScoreDisplay').textContent = `${score} / ${totalQuestions}`;
+      document.getElementById('certPercentDisplay').textContent = `${percentage}%`;
+
+      const today = new Date();
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('certDateDisplay').textContent = today.toLocaleDateString('ar-EG', options);
+
+      document.getElementById('certificateModal').classList.remove('hidden');
+    }
+
+    function closeCertificateModal() {
+      document.getElementById('certificateModal').classList.add('hidden');
+    }
+
+    /* =========================================================
+       STREAMING_CHUNK:Teacher Control Room Logic (CLOUDFLARE CLOUD)
+       ========================================================= */
+
+    function openAdminModal() {
+      playSound('click');
+      document.getElementById('adminModal').classList.remove('hidden');
+      document.getElementById('adminPasswordGate').classList.remove('hidden');
+      document.getElementById('adminDashboardView').classList.add('hidden');
+      document.getElementById('adminPasswordInput').value = '';
+      document.getElementById('adminPassError').classList.add('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+      adminSessionPassword = '';
+    }
+
+    async function checkAdminPassword() {
+      const pass = document.getElementById('adminPasswordInput').value.trim();
+      const err = document.getElementById('adminPassError');
+
+      if (!pass) {
+        err.textContent = 'يرجى إدخال كلمة المرور.';
+        err.classList.remove('hidden');
+        return;
+      }
+
+      if (!isOnlineApp()) {
+        err.textContent = 'افتح لوحة المعلم من رابط الاختبار المنشور على Cloudflare.';
+        err.classList.remove('hidden');
+        return;
+      }
+
+      try {
+        const data = await callQuizApi('teacher-dashboard', { password: pass });
+        if (data && data.ok) {
+          playSound('correct');
+          adminSessionPassword = pass;
+          err.classList.add('hidden');
+          document.getElementById('adminPasswordGate').classList.add('hidden');
+          document.getElementById('adminDashboardView').classList.remove('hidden');
+          applyTeacherDashboardData(data);
+        } else {
+          playSound('wrong');
+          err.textContent = 'كلمة المرور غير صحيحة، يرجى إعادة المحاولة.';
+          err.classList.remove('hidden');
+        }
+      } catch (error) {
+        console.error('Teacher auth error:', error);
+        playSound('wrong');
+        err.textContent = error.message.includes('401') || error.message.includes('غير صحيحة')
+          ? 'كلمة المرور غير صحيحة، يرجى إعادة المحاولة.'
+          : 'تعذر الاتصال بالسجل السحابي. حاول مرة أخرى.';
+        err.classList.remove('hidden');
+      }
+    }
+
+    async function saveStudentResultOnline(totalQuestions, percentage) {
+      const payload = {
+        name: currentStudentName,
+        answers: studentAnswersHistory.map(item => ({
+          questionId: Number(item.questionId),
+          selectedOptionIndex: Number(item.chosenOptionIndex)
+        }))
+      };
+
+      if (!isOnlineApp()) {
+        // Offline fallback for local testing only.
+        try {
+          const key = 'arabic_grammar_quiz_logs_v1';
+          const raw = localStorage.getItem(key);
+          const logs = raw ? JSON.parse(raw) : [];
+          const attempts = logs.filter(l => (l.name || '').trim().toLowerCase() === currentStudentName.trim().toLowerCase()).length + 1;
+          logs.unshift({
+            id: Date.now(),
+            name: currentStudentName,
+            timestamp: new Date().toLocaleDateString('ar-EG') + ' ' + new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' }),
+            score,
+            total: totalQuestions,
+            percentage,
+            attemptNumber: attempts
+          });
+          localStorage.setItem(key, JSON.stringify(logs));
+        } catch (e) {
+          console.error('Offline save error:', e);
+        }
+        return;
+      }
+
+      showCloudSaveState('جارٍ حفظ النتيجة في السجل السحابي...');
+      try {
+        const result = await callQuizApi('submit-result', payload, 20000);
+        if (result && result.ok) {
+          showCloudSaveState('✅ تم حفظ النتيجة في سجل المعلم بنجاح.');
+        } else {
+          showCloudSaveState('تعذر تأكيد حفظ النتيجة.', 'error');
+        }
+      } catch (error) {
+        console.error('Cloud save error:', error);
+        showCloudSaveState('⚠️ ظهرت النتيجة للطالب، لكن تعذر رفعها للسحابة. أعد إرسال الاختبار لاحقًا إذا لزم.', 'error');
+      }
+    }
+
+    function applyTeacherDashboardData(data) {
+      teacherLogsCache = Array.isArray(data.logs) ? data.logs : [];
+      teacherMissedStatsCache = data.missedStats && typeof data.missedStats === 'object' ? data.missedStats : {};
+
+      if (Number.isFinite(Number(data.threshold))) {
+        certThreshold = Number(data.threshold);
+        const thresholdInput = document.getElementById('certThresholdInput');
+        if (thresholdInput) thresholdInput.value = certThreshold;
+      }
+
+      renderTeacherDashboard(teacherLogsCache, teacherMissedStatsCache);
+    }
+
+    async function refreshAdminDashboard() {
+      if (!isOnlineApp() || !adminSessionPassword) {
+        return;
+      }
+
+      try {
+        const data = await callQuizApi('teacher-dashboard', { password: adminSessionPassword });
+        if (data && data.ok) {
+          applyTeacherDashboardData(data);
+        } else {
+          showCustomDialog('alert', 'انتهت الجلسة', 'تعذر التحقق من صلاحية لوحة المعلم. افتح اللوحة وسجّل الدخول من جديد.');
+        }
+      } catch (error) {
+        console.error('Dashboard refresh error:', error);
+        showCustomDialog('alert', 'تعذر التحديث', 'حدث خطأ أثناء تحميل النتائج من السحابة.');
+      }
+    }
+
+    function renderTeacherDashboard(logs, missedStats) {
+      document.getElementById('statTotalAttempts').textContent = logs.length;
+
+      let passCount = 0;
+      let totalPercentSum = 0;
+      let certAwarded = 0;
+
+      logs.forEach(l => {
+        const pct = Number(l.percentage) || 0;
+        totalPercentSum += pct;
+        if (pct >= 50) passCount++;
+        if (pct >= certThreshold) certAwarded++;
+      });
+
+      const passRate = logs.length > 0 ? Math.round((passCount / logs.length) * 100) : 0;
+      const avgScore = logs.length > 0 ? Math.round((totalPercentSum / logs.length) * 0.4) : 0;
+
+      document.getElementById('statPassRate').textContent = `${passRate}%`;
+      document.getElementById('statAverageScore').textContent = `${avgScore}/40`;
+      document.getElementById('statCertificatesCount').textContent = certAwarded;
+
+      renderMissedQuestionsAnalysis(missedStats);
+
+      const tbody = document.getElementById('studentLogsTableBody');
+      tbody.innerHTML = '';
+
+      if (logs.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="p-4 text-center text-slate-400">لا توجد سجلات مسجلة حتى الآن</td></tr>`;
+        return;
+      }
+
+      logs.forEach((log, i) => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-sky-50/50 transition";
+        const isQualified = Number(log.percentage) >= certThreshold;
+
+        tr.innerHTML = `
+          <td class="p-2.5 font-bold">${i + 1}</td>
+          <td class="p-2.5 font-semibold text-heritage-navy">${escapeHtml(log.name || '')}</td>
+          <td class="p-2.5 text-slate-500">${escapeHtml(log.timestamp || '')}</td>
+          <td class="p-2.5 font-bold text-heritage-emerald">${Number(log.score) || 0} / ${Number(log.total) || 40}</td>
+          <td class="p-2.5 font-bold">${Number(log.percentage) || 0}%</td>
+          <td class="p-2.5 text-center">المحاولة ${Number(log.attemptNumber) || 1}</td>
+          <td class="p-2.5">
+            ${isQualified ? '<span class="bg-sky-100 text-sky-800 text-[10px] px-2 py-0.5 rounded-full font-bold">مستحق للشهادة ⭐</span>' : '<span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded-full">اجتياز</span>'}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderMissedQuestionsAnalysis(stats = teacherMissedStatsCache) {
+      const container = document.getElementById('missedQuestionsAnalysis');
+      container.innerHTML = '';
+
+      const safeStats = stats || {};
+      const sortedIds = Object.keys(safeStats).sort((a, b) => Number(safeStats[b]) - Number(safeStats[a]));
+
+      if (sortedIds.length === 0) {
+        container.innerHTML = `<div class="text-slate-500 italic">لم يتم رصد أخطاء متكررة بعد. أداء الطلاب متميز!</div>`;
+        return;
+      }
+
+      sortedIds.slice(0, 5).forEach(id => {
+        const q = QUESTIONS_BANK.find(item => item.id == id);
+        if (q) {
+          const div = document.createElement('div');
+          div.className = "p-2 bg-white rounded border border-red-200 flex items-center justify-between";
+          div.innerHTML = `
+            <span class="truncate max-w-md font-semibold">${escapeHtml(q.text)}</span>
+            <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded font-bold whitespace-nowrap mr-2">تكرر الخطأ: ${Number(safeStats[id])} مرات</span>
+          `;
+          container.appendChild(div);
+        }
+      });
+    }
+
+    function downloadStudentLogCSV() {
+      const logs = teacherLogsCache || [];
+
+      if (logs.length === 0) {
+        showCustomDialog('alert', 'تنبيه', "لا توجد بيانات متاحة للتصدير حالياً.");
+        return;
+      }
+
+      let csv = "\uFEFF";
+      csv += "م,اسم الطالب,التاريخ والوقت,الدرجة,الدرجة الكلية,النسبة المئوية,رقم المحاولة\n";
+
+      logs.forEach((log, index) => {
+        const row = [
+          index + 1,
+          log.name || '',
+          log.timestamp || '',
+          Number(log.score) || 0,
+          Number(log.total) || 40,
+          `${Number(log.percentage) || 0}%`,
+          Number(log.attemptNumber) || 1
+        ];
+        csv += row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',') + "\n";
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `تقرير_طلاب_المفعول_به_أ_حازم_أنور_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    function clearStudentLogs() {
+      showCustomDialog('confirm', 'تفريغ السجل بالكامل؟', 'سيتم حذف جميع سجلات الطلاب وإحصائيات الأخطاء من السحابة نهائياً. هل أنت متأكد؟', async () => {
+        if (!isOnlineApp() || !adminSessionPassword) {
+          showCustomDialog('alert', 'غير متاح', 'يجب فتح لوحة المعلم من الرابط المنشور وتسجيل الدخول أولاً.');
+          return;
+        }
+
+        try {
+          const result = await callQuizApi('clear-teacher-logs', { password: adminSessionPassword }, 30000);
+          if (result && result.ok) {
+            teacherLogsCache = [];
+            teacherMissedStatsCache = {};
+            renderTeacherDashboard([], {});
+            showCustomDialog('alert', 'تم بنجاح', 'تم تفريغ السجل السحابي بالكامل.');
+          } else {
+            showCustomDialog('alert', 'تعذر الحذف', 'تعذر تنفيذ عملية الحذف.');
+          }
+        } catch (error) {
+          console.error('Clear logs error:', error);
+          showCustomDialog('alert', 'تعذر الحذف', 'حدث خطأ أثناء حذف السجل من السحابة.');
+        }
+      });
+    }
+
+    async function saveCertThreshold() {
+      const val = parseInt(document.getElementById('certThresholdInput').value, 10);
+
+      if (!(val >= 50 && val <= 100)) {
+        showCustomDialog('alert', 'خطأ في الإدخال', 'يرجى إدخال نسبة صحيحة بين 50% و 100%');
+        return;
+      }
+
+      if (!isOnlineApp() || !adminSessionPassword) {
+        showCustomDialog('alert', 'غير متاح', 'سجّل الدخول إلى لوحة المعلم من الرابط المنشور أولاً.');
+        return;
+      }
+
+      try {
+        const result = await callQuizApi('save-settings', { password: adminSessionPassword, threshold: val });
+        if (result && result.ok) {
+          certThreshold = val;
+          renderTeacherDashboard(teacherLogsCache, teacherMissedStatsCache);
+          showCustomDialog('alert', 'تم الحفظ', `تم تحديث نسبة استحقاق الشهادة لتكون: ${val}% فأكثر.`);
+        } else {
+          showCustomDialog('alert', 'تعذر الحفظ', 'تعذر تحديث الإعداد.');
+        }
+      } catch (error) {
+        console.error('Threshold save error:', error);
+        showCustomDialog('alert', 'تعذر الحفظ', 'حدث خطأ أثناء حفظ نسبة الشهادة.');
+      }
+    }
+
+    function escapeHtml(value) {
+      const div = document.createElement('div');
+      div.textContent = String(value);
+      return div.innerHTML;
+    }
+
+    // Kept only as a local/offline fallback; online mode sends mistake IDs with the final result.
+    function recordMistakeInStats(questionId) {
+      try {
+        const key = 'arabic_grammar_missed_stats_v1';
+        const raw = localStorage.getItem(key);
+        const stats = raw ? JSON.parse(raw) : {};
+        stats[questionId] = (stats[questionId] || 0) + 1;
+        localStorage.setItem(key, JSON.stringify(stats));
+      } catch (e) {
+        console.error("Error updating local mistake stats:", e);
+      }
+    }
+
+    /* =========================================================
+       PRINT QUESTION BANK
+       ========================================================= */
+    function printQuestionsSheet(withAnswers) {
+      const printWin = window.open('', '_blank');
+      let html = `
+        <!DOCTYPE html>
+        <html lang="ar" dir="rtl">
+        <head>
+          <meta charset="UTF-8">
+          <title>${withAnswers ? 'بنك أسئلة المفعول به مع نموذج الإجابة' : 'اختبار مادة اللغة العربية - المفعول به'}</title>
+          <style>
+            body { font-family: 'Cairo', 'Traditional Arabic', sans-serif; padding: 25px; color: #2C1414; direction: rtl; }
+            .header { text-align: center; border-bottom: 2px double #333; padding-bottom: 15px; margin-bottom: 20px; }
+            .meta-table { width: 100%; margin-bottom: 20px; border-collapse: collapse; }
+            .meta-table td { padding: 6px; font-weight: bold; font-size: 14px; }
+            .question-item { margin-bottom: 16px; page-break-inside: avoid; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
+            .question-title { font-weight: bold; font-size: 15px; margin-bottom: 6px; }
+            .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; }
+            .option { padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; }
+            .correct-ans { background-color: #FDF5E6; border-color: #C2A878; font-weight: bold; }
+            .explanation { font-size: 12px; color: #800020; margin-top: 4px; padding: 4px; background: #F5F5F5; border-radius: 4px; }
+            @media print {
+              .no-print-btn { display: none; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="no-print-btn" style="text-align: left; margin-bottom: 15px;">
+            <button onclick="window.print()" style="padding: 8px 16px; background: #800020; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; font-weight: bold;">
+              🖨️ طباعة الورقة الآن
+            </button>
+          </div>
+          <div class="header">
+            <h2 style="margin: 0 0 5px 0;">وزارة التربية والتعليم • الصف الخامس الابتدائي</h2>
+            <h3 style="margin: 0 0 5px 0;">اختبار شامل في القواعد النحوية: (المَفْعُولُ بِهِ وَعَلَامَاتُ إِعْرَابِهِ)</h3>
+            <p style="margin: 0; font-size: 13px;">إعداد: الأستاذ/ حازم أنور ${withAnswers ? '• [نَمُوذَجُ الإِجَابَةِ الرَّسْمِيُّ]' : ''}</p>
+          </div>
+          <table class="meta-table">
+            <tr>
+              <td>اسم الطالب: .................................................</td>
+              <td>الفصل: 5 / ........</td>
+              <td>التاريخ: .... / .... / ........</td>
+              <td>الدرجة: ........ / 40</td>
+            </tr>
+          </table>
+          <hr style="margin-bottom: 20px;">
+      `;
+
+      QUESTIONS_BANK.forEach((q, idx) => {
+        html += `
+          <div class="question-item">
+            <div class="question-title">(${idx + 1}) ${q.text}</div>
+            <div class="options-grid">
+              ${q.options.map((opt, oIdx) => {
+                const isCorrect = withAnswers && (oIdx === q.answer);
+                return `<div class="option ${isCorrect ? 'correct-ans' : ''}">
+                  ${['أ', 'ب', 'ج', 'د'][oIdx]}) ${opt} ${isCorrect ? ' ✓' : ''}
+                </div>`;
+              }).join('')}
+            </div>
+            ${withAnswers ? `<div class="explanation">💡 <strong>سبب الإجابة:</strong> ${q.explanation}</div>` : ''}
+          </div>
+        `;
+      });
+
+      html += `</body></html>`;
+
+      printWin.document.write(html);
+      printWin.document.close();
+    }
+  </script>
+</body>
+</html>
